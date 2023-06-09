@@ -219,15 +219,6 @@
                         <li class="has-sub">
                             <a class="js-arrow" href="/">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="/">Dashboard</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="chart.php">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>
                             <a href="/table">
