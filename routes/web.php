@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,14 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/register', function () {
-    return view('register');
 });
 
 Route::get('/table', function () {
@@ -39,6 +31,15 @@ Route::get('/calendar', function () {
 
 Route::get('/map', function () {
     return view('map');
+});
+
+Route::controller(Controller::class)->group(function() {
+    Route::get('/register', 'register')->name('register');
+    Route::post('/store', 'store')->name('store');
+    Route::get('/login', 'login')->name('login');
+    Route::post('/authenticate', 'authenticate')->name('authenticate');
+    Route::get('/index', 'index')->name('index');
+    Route::post('/logout', 'logout')->name('logout');
 });
 
 
